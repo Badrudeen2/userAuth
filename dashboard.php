@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>welcome</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="src/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
+  <?php 
+  session_start();
+  
+  ?>
+
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"><h2>ZURI-PHP</h2></a>
@@ -18,15 +24,12 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item f-right">
-        <a class="nav-link" href="forms/login.html">Login</a>
-      </li>
-      <li class="nav-item f-right">
-        <a class="nav-link " href="forms/register.html">Register</a>
+        <a class="nav-link" href="php/logout.php">Logout</a>
       </li>
   </div>
 </nav>
 <div class="container justify-content-center">
-     <h1 class="">Welcome to Zuri Authentication with PHP</h1>
+     <h1 class="">Welcome to Zuri Authentication <?php echo $_SESSION['email'];   ?></h1>
 </div>
    
 </body>
